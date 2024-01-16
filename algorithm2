@@ -1,0 +1,27 @@
+# Algorithme pour la somme des éléments distincts de deux ensembles
+def sum_of_unique_elements(set1, set2):
+    # Initialiser la somme
+    sum_result = 0
+    
+    # Utiliser un tableau pour garder une trace des éléments déjà rencontrés
+    seen_elements = []
+    
+    # Parcourir les éléments de l'ensemble 1
+    for element in set1:
+        if element not in seen_elements:
+            sum_result += element
+            seen_elements.append(element)
+    
+    # Parcourir les éléments de l'ensemble 2
+    for element in set2:
+        if element not in seen_elements:
+            sum_result += element
+            seen_elements.append(element)
+    
+    # Afficher le résultat
+    print("La somme des éléments distincts est :", sum_result)
+
+# Exemple d'utilisation
+ensemble1 = [3, 1, 7, 9]
+ensemble2 = [2, 4, 1, 9, 3]
+sum_of_unique_elements(ensemble1, ensemble2)
