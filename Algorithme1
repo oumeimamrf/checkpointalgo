@@ -1,0 +1,25 @@
+# Algorithme pour compter les mots et les voyelles dans une phrase
+def count_words_and_vowels(phrase):
+    # Initialiser les compteurs
+    word_count = 0
+    vowel_count = 0
+    
+    # Parcourir chaque caractère de la phrase
+    for char in phrase:
+        # Compter les mots (en supposant que les mots sont séparés par un espace)
+        if char == ' ':
+            word_count += 1
+        # Compter les voyelles (en supposant les voyelles en minuscules)
+        elif char in 'aeiou':
+            vowel_count += 1
+    
+    # Ajouter le dernier mot (après le dernier espace)
+    word_count += 1
+    
+    # Afficher les résultats
+    print("Nombre de mots dans la phrase:", word_count)
+    print("Nombre de voyelles dans la phrase:", vowel_count)
+
+# Exemple d'utilisation
+phrase_exemple = "Ceci est un exemple de phrase."
+count_words_and_vowels(phrase_exemple)
